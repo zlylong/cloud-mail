@@ -31,3 +31,8 @@ jobs:
         run: |
           git checkout main
           git merge upstream/main --no-edit || echo "Nothing to merge"
+
+      - name: 🚨 Trigger Deploy Workflow
+        uses: peter-evans/workflow-dispatch@v1
+        with:
+          workflow: deploy-cloudflare.yml
