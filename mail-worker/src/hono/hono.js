@@ -57,7 +57,7 @@ app.use(
 			return allowList.includes(normalized) ? normalized : undefined;
 		},
 		credentials: false,
-		allowHeaders: ['Authorization', 'Content-Type'],
+		allowHeaders: ['Authorization', 'Content-Type', 'Accept-Language'],
 		exposeHeaders: ['Content-Disposition']
 	})
 );
@@ -85,4 +85,3 @@ app.onError((err, c) => {
 });
 
 export default app;
-
